@@ -1,0 +1,19 @@
+Started by user [8mha:////4BrJ4rpgIjMXRvfxRFOIQpFFMk964zQpcvq0y0OTWPvgAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/copy_file_training
+[SSH] script:
+
+cd /data/rapi_detecface
+rm -rf ./sql
+rm -rf ./recognizer
+
+[SSH] executing...
+
+[SSH] completed
+[SSH] exit-status: 0
+
+[copy_file_training] $ /bin/sh -xe /tmp/jenkins14567209476211582216.sh
++ sudo scp /data/detecface_iotcenter/static/recognizer root@192.168.107.140:/data/rapi_detecface
+/data/detecface_iotcenter/static/recognizer: not a regular file
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

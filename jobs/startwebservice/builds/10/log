@@ -1,0 +1,27 @@
+Started by user [8mha:////4BrJ4rpgIjMXRvfxRFOIQpFFMk964zQpcvq0y0OTWPvgAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/startwebservice
+[SSH] script:
+
+cd /data/detecface_iotcenter
+screen -d -m python3 main.py
+
+[SSH] executing...
+
+[SSH] completed
+[SSH] exit-status: 0
+
+[SSH] script:
+
+cd /data/rapi_detecface
+screen -d -m python3 main.py
+
+[SSH] executing...
+
+[SSH] completed
+[SSH] exit-status: 0
+
+[startwebservice] $ /bin/sh -xe /tmp/jenkins5451681445019216152.sh
++ cd /data/detecface_iotcenter
++ sudo screen -d -m python3 main.py
+Finished: SUCCESS

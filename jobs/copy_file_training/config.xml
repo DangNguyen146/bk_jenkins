@@ -1,0 +1,39 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties/>
+  <scm class="hudson.scm.NullSCM"/>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <authToken>1234</authToken>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <org.jvnet.hudson.plugins.SSHBuilder plugin="ssh@2.6.1">
+      <siteName>root@192.168.107.140:22</siteName>
+      <command>rm -rf /data/rapi_detecface/sql/trainningData.yml
+rm -rf /data/rapi_detecface/recognizer/trainningData.yml</command>
+      <execEachLine>false</execEachLine>
+      <hideCommand>false</hideCommand>
+    </org.jvnet.hudson.plugins.SSHBuilder>
+    <hudson.tasks.Shell>
+      <command>sudo scp /data/detecface_iotcenter/static/recognizer/trainningData.yml root@192.168.107.140:/data/rapi_detecface/recognizer
+sudo scp /data/detecface_iotcenter/static/sql/useropendoor.db root@192.168.107.140:/data/rapi_detecface/sql</command>
+      <configuredLocalRules/>
+    </hudson.tasks.Shell>
+    <org.jvnet.hudson.plugins.SSHBuilder plugin="ssh@2.6.1">
+      <siteName>root@192.168.107.140:22</siteName>
+      <command>sudo kill -9 `sudo lsof -t -i:5050`
+cd /data/rapi_detecface
+screen -d -m python3 main.py</command>
+      <execEachLine>false</execEachLine>
+      <hideCommand>false</hideCommand>
+    </org.jvnet.hudson.plugins.SSHBuilder>
+  </builders>
+  <publishers/>
+  <buildWrappers/>
+</project>

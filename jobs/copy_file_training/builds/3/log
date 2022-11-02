@@ -1,0 +1,21 @@
+Started by remote host 127.0.0.1
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/copy_file_training
+[SSH] script:
+
+cd /data/rapi_detecface
+rm -rf sql
+rm -rf recognizer
+
+[SSH] executing...
+
+[SSH] completed
+[SSH] exit-status: 0
+
+[copy_file_training] $ /bin/sh -xe /tmp/jenkins152921052867448362.sh
++ cd /data/detecface_iotcenter/static
++ sudo scp ./recognizer root@191.162.107.140:/data/rapi_detecface
+ssh: connect to host 191.162.107.140 port 22: Connection refused
+lost connection
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

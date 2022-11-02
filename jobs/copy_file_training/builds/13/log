@@ -1,0 +1,28 @@
+Started by user [8mha:////4BrJ4rpgIjMXRvfxRFOIQpFFMk964zQpcvq0y0OTWPvgAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/copy_file_training
+[SSH] script:
+
+rm -rf /data/rapi_detecface/sql/trainningData.yml
+rm -rf /data/rapi_detecface/recognizer/trainningData.yml
+
+[SSH] executing...
+
+[SSH] completed
+[SSH] exit-status: 0
+
+[copy_file_training] $ /bin/sh -xe /tmp/jenkins5084119973582070563.sh
++ sudo scp /data/detecface_iotcenter/static/recognizer/trainningData.yml root@192.168.107.140:/data/rapi_detecface/recognizer
++ sudo scp /data/detecface_iotcenter/static/sql/useropendoor.db root@192.168.107.140:/data/rapi_detecface/sql
+[SSH] script:
+
+sudo kill -9 `sudo lsof -t -i:5050`
+cd /data/rapi_detecface
+screen -d -m python3 main.py
+
+[SSH] executing...
+
+[SSH] completed
+[SSH] exit-status: 0
+
+Finished: SUCCESS

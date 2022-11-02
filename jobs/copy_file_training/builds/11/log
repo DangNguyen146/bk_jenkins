@@ -1,0 +1,17 @@
+Started by remote host 192.168.206.131
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/copy_file_training
+[SSH] script:
+
+rm -rf /data/rapi_detecface/sql/trainningData.yml
+rm -rf /data/rapi_detecface/recognizer/trainningData.yml
+
+[SSH] executing...
+
+[SSH] completed
+[SSH] exit-status: 0
+
+[copy_file_training] $ /bin/sh -xe /tmp/jenkins309382326530555055.sh
++ sudo scp /data/detecface_iotcenter/static/recognizer/trainningData.yml root@192.168.107.140:/data/rapi_detecface/recognizer
++ sudo scp /data/detecface_iotcenter/static/sql/useropendoor.db root@192.168.107.140:/data/rapi_detecface/sql
+Finished: SUCCESS

@@ -1,0 +1,18 @@
+Started by user [8mha:////4BrJ4rpgIjMXRvfxRFOIQpFFMk964zQpcvq0y0OTWPvgAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/copy_file_training
+[SSH] script:
+
+rm -rf /data/rapi_detecface/sql/trainningData.yml
+rm -rf /data/rapi_detecface/recognizer/trainningData.yml
+
+[SSH] executing...
+
+[SSH] completed
+[SSH] exit-status: 0
+
+[copy_file_training] $ /bin/sh -xe /tmp/jenkins16606602367136787412.sh
++ sudo scp /data/detecface_iotcenter/static/recognizer/trainningData.yml root@192.168.107.140:/data/rapi_detecface/recognizer
+/data/detecface_iotcenter/static/recognizer/trainningData.yml: No such file or directory
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE
